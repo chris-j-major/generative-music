@@ -6,6 +6,7 @@ const Music = require("../");
 describe("Music(basic)", function() {
 
   var m = new Music();
+  m.loadDefault();
 
   describe('generate()', function() {
     var gen = m.generate();

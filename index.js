@@ -14,6 +14,9 @@ Music.prototype.extendModel = function( key , f ){
   this.model.extend(key,f);
   return this;
 }
+Music.prototype.loadDefault = function(){
+  require("./parts").prepare( this.model );
+}
 Music.prototype.generate = function( opts ){
   if ( ! opts ) opts = {};
   if ( !opts.reporter ) opts.reporter = core.Reporter.console;
