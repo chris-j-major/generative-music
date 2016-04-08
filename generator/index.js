@@ -12,6 +12,7 @@ Generator.prototype.toString = function(){
 }
 Generator.prototype.toMidi = function(){
   var file = new jsmidgen.File();
+//  this.tracks = [ this.tracks[0] ];
   this.tracks.map(function(t){
   	var track = new jsmidgen.Track();
   	file.addTrack(track);
@@ -39,7 +40,6 @@ Generator.prototype.toMidi = function(){
   			track.noteOff(0, '', noteObj.length);
   		}
   	});
-
   });
   return file.toBytes();
 }

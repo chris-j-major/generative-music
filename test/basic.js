@@ -1,4 +1,5 @@
 const assert = require('assert');
+const temp = require('temp');
 const core = require("generative-core");
 const Music = require("../");
 
@@ -15,8 +16,9 @@ describe("Music(basic)", function() {
       done();
     });
     it("Generates midi",function(done){
-      assert.ok( gen.toMidi().length > 0 );
-      done();
+      bytes = gen.toMidi();
+      assert.ok( bytes.length > 0 );
+      fs.writeFileSync('test.mid', bytes, 'binary');
     });
   });
 });
