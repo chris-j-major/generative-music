@@ -1,0 +1,19 @@
+{
+  "name": "generative-music",
+  "version": "0.0.1",
+  "description": "Library to create generative music.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Chris Major",
+  "license": "MIT",
+  "dependencies": {
+    "generative-core": "^0.0.1",
+    "jsmidgen": "^0.1.5",
+    "scribbletune": "^0.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
